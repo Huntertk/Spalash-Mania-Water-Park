@@ -1,76 +1,9 @@
 import { v4 as uuidv4 } from 'uuid';
-import imgCelestial from './assets/images/Celestial.avif'
-import imgSkyHigh from './assets/images/SkyHigh.avif'
-import lunchBuffet from './assets/images/LunchBuffet.avif'
-import dinnerBuffet from './assets/images/DinnerBuffet.avif'
-import teaBuffet from './assets/images/TeaBuffet.avif'
-import imgTen from './assets/images/IMGTEN.jpg'
-import imgEleven from './assets/images/IMGELEVEN.jpg'
-import imgFifteen from './assets/images/IMGFIFITEEN.jpg'
-
-//First
-
-import outdoorThemeParkImgOne from './assets/images/outdoorThemeParkImgOne.avif'
-import outdoorThemeParkImgTwo from './assets/images/outdoorThemeParkImgTwo.avif'
-import outdoorThemeParkImgThree from './assets/images/outdoorThemeParkImgThree.avif'
-import outdoorThemeParkImgFour from './assets/images/outdoorThemeParkImgFour.avif'
-import outdoorThemeParkImgFive from './assets/images/outdoorThemeParkImgFive.avif'
-import outdoorThemeParkImgSix from './assets/images/outdoorThemeParkImgSix.avif'
-import outdoorThemeParkImgSeven from './assets/images/outdoorThemeParkImgSeven.avif'
-
-//Second
-import gentingAwanaskyWayImgOne from './assets/images/gentingAwanaskyWayImgOne.avif'
-import gentingAwanaskyWayImgTwo from './assets/images/gentingAwanaskyWayImgTwo.avif'
-import gentingAwanaskyWayImgThree from './assets/images/gentingAwanaskyWayImgThree.avif'
-import gentingAwanaskyWayImgFour from './assets/images/gentingAwanaskyWayImgFour.avif'
-import gentingAwanaskyWayImgFive from './assets/images/gentingAwanaskyWayImgFive.avif'
-import gentingAwanaskyWayImgSix from './assets/images/gentingAwanaskyWayImgSix.avif'
-import gentingAwanaskyWayImgSeven from './assets/images/gentingAwanaskyWayImgSeven.avif'
-import gentingAwanaskyWayImgEight from './assets/images/gentingAwanaskyWayImgEight.avif'
-import gentingAwanaskyWayImgNine from './assets/images/gentingAwanaskyWayImgNine.avif'
-import gentingAwanaskyWayImgTen from './assets/images/gentingAwanaskyWayImgTen.avif'
-
-//Third
-import gentingSkyWorldsThemeParkSkytropolisIndoorThemeParkImgOne from './assets/images/gentingSkyWorldsThemeParkSkytropolisIndoorThemeParkImgOne.avif'
-import gentingSkyWorldsThemeParkSkytropolisIndoorThemeParkImgTwo from './assets/images/gentingSkyWorldsThemeParkSkytropolisIndoorThemeParkImgTwo.avif'
-import gentingSkyWorldsThemeParkSkytropolisIndoorThemeParkImgThree from './assets/images/gentingSkyWorldsThemeParkSkytropolisIndoorThemeParkImgThree.avif'
-import gentingSkyWorldsThemeParkSkytropolisIndoorThemeParkImgFour from './assets/images/gentingSkyWorldsThemeParkSkytropolisIndoorThemeParkImgFour.avif'
-import gentingSkyWorldsThemeParkSkytropolisIndoorThemeParkImgFive from './assets/images/gentingSkyWorldsThemeParkSkytropolisIndoorThemeParkImgFive.avif'
-import gentingSkyWorldsThemeParkSkytropolisIndoorThemeParkImgSix from './assets/images/gentingSkyWorldsThemeParkSkytropolisIndoorThemeParkImgSix.avif'
-import gentingSkyWorldsThemeParkSkytropolisIndoorThemeParkImgSeven from './assets/images/gentingSkyWorldsThemeParkSkytropolisIndoorThemeParkImgSeven.avif'
-
-//Fourth
-import gentingAwanaSkyWayOnewaySkyworldOutdoorThemeParkTicketsImgOne from './assets/images/gentingAwanaSkyWayOnewaySkyworldOutdoorThemeParkTicketsImgOne.avif'
-import gentingAwanaSkyWayOnewaySkyworldOutdoorThemeParkTicketsImgTwo from './assets/images/gentingAwanaSkyWayOnewaySkyworldOutdoorThemeParkTicketsImgTwo.avif'
-import gentingAwanaSkyWayOnewaySkyworldOutdoorThemeParkTicketsImgThree from './assets/images/gentingAwanaSkyWayOnewaySkyworldOutdoorThemeParkTicketsImgThree.avif'
-import gentingAwanaSkyWayOnewaySkyworldOutdoorThemeParkTicketsImgFour from './assets/images/gentingAwanaSkyWayOnewaySkyworldOutdoorThemeParkTicketsImgFour.avif'
-
-//Fifth
-import gentingAwanaSkywayOnewaySkyworldOutdoorSkytropolisIndoorThemeParkImgOne from './assets/images/gentingAwanaSkywayOnewaySkyworldOutdoorSkytropolisIndoorThemeParkImgOne.avif'
-import gentingAwanaSkywayOnewaySkyworldOutdoorSkytropolisIndoorThemeParkImgTwo from './assets/images/gentingAwanaSkywayOnewaySkyworldOutdoorSkytropolisIndoorThemeParkImgTwo.avif'
-import gentingAwanaSkywayOnewaySkyworldOutdoorSkytropolisIndoorThemeParkImgThree from './assets/images/gentingAwanaSkywayOnewaySkyworldOutdoorSkytropolisIndoorThemeParkImgThree.avif'
-import gentingAwanaSkywayOnewaySkyworldOutdoorSkytropolisIndoorThemeParkImgFour from './assets/images/gentingAwanaSkywayOnewaySkyworldOutdoorSkytropolisIndoorThemeParkImgFour.avif'
-
-//Zones Inside Genting SkyWorlds Theme Park
-import studioPlazaImg from './assets/images/studioPlazaImg.avif'
-import eagleMountainImg from './assets/images/eagleMountainImg.avif'
-import centralParkImg from './assets/images/centralParkImg.avif'
-import andromedaBaseImg from './assets/images/andromedaBaseImg.avif'
-import libertyLaneImg from './assets/images/libertyLaneImg.avif'
-import robotsRevetTownImg from './assets/images/robotsRevetTownImg.avif'
-import rioImg from './assets/images/rioImg.avif'
-import epicImg from './assets/images/epicImg.avif'
-import iceAgeImg from './assets/images/iceAgeImg.avif'
-
-
-//Things To Do Genting SkyWorlds Theme Park
-import ridesAttractions from './assets/images/ridesAttractionsImg.avif'
-import themedAreas from './assets/images/themedAreasImg.avif'
-import gamesActivitiesImg from './assets/images/gamesActivitiesImg.avif'
-import restaurantsImg from './assets/images/restaurantsImg.avif'
-import storesImg from './assets/images/storesImg.avif'
-import photoBoothImg from './assets/images/photoBoothImg.avif'
-
+import imgOne from './assets/images/imgOne.avif'
+import imgTwo from './assets/images/imgTwo.avif'
+import imgThree from './assets/images/imgThree.avif'
+import imgFour from './assets/images/imgFour.avif'
+import imgFive from './assets/images/imgFive.avif'
 
 
 
@@ -78,82 +11,17 @@ export const cardData = [
     {
         id: uuidv4(),
         image:[
-            outdoorThemeParkImgOne,
-            outdoorThemeParkImgTwo,
-            outdoorThemeParkImgThree,
-            outdoorThemeParkImgFour,
-            outdoorThemeParkImgFive,
-            outdoorThemeParkImgSix,
-            outdoorThemeParkImgSeven,
-
+            imgOne,
+            imgTwo,
+            imgThree,
+            imgFour,
+            imgFive
         ],
-        title:"Tickets to Genting SkyWorld Outdoor Theme Park",
-        desc:"Make your way to Genting SkyWorlds Theme, an exhilarating adventure spot that features 9 distinct themed worlds and houses 26 thrilling rides and attractions.",
+        title:"Tickets to SplashMania Waterpark at Gamuda Cove Selangor",
+        desc:"Experience the ultimate thrills with your loved ones on 39 exciting water slides and rides at SplashMania waterpark.",
         type:"bookTypeOne",
-        price: 151,
+        price: 113,
 
-    },
-    {
-        id: uuidv4(),
-        image:[
-            gentingAwanaskyWayImgOne,
-            gentingAwanaskyWayImgTwo,
-            gentingAwanaskyWayImgThree,
-            gentingAwanaskyWayImgFour,
-            gentingAwanaskyWayImgFive,
-            gentingAwanaskyWayImgSix,
-            gentingAwanaskyWayImgSeven,
-            gentingAwanaskyWayImgEight,
-            gentingAwanaskyWayImgNine,
-            gentingAwanaskyWayImgTen,
-
-        ],
-        title:"Combo: Genting Awana SkyWay (One-way) + Skytropolis Indoor Theme Park Tickets",
-        desc:"Non-stop excitement awaits as you explore the Awana SkyWay and the Skytropolis Indoor Theme Park with this money-saver combo ticket.",
-        type:"bookTypeTwo",
-        price: 75
-    },
-    {
-        id: uuidv4(),
-      image:[
-        gentingSkyWorldsThemeParkSkytropolisIndoorThemeParkImgOne,
-        gentingSkyWorldsThemeParkSkytropolisIndoorThemeParkImgTwo,
-        gentingSkyWorldsThemeParkSkytropolisIndoorThemeParkImgThree,
-        gentingSkyWorldsThemeParkSkytropolisIndoorThemeParkImgFour,
-        gentingSkyWorldsThemeParkSkytropolisIndoorThemeParkImgFive,
-        gentingSkyWorldsThemeParkSkytropolisIndoorThemeParkImgSix,
-        gentingSkyWorldsThemeParkSkytropolisIndoorThemeParkImgSeven,
-        ],
-        title:"Combo : Genting SkyWorlds Theme Park + Skytropolis Indoor Theme Park Tickets",
-        desc:"Experience thrill, adventure, family fun, and more with these budget-friendly combo tickets to Genting Skytropolis and Skyworlds Theme Park.",
-        type:"bookTypeThree",
-        price: 215
-    },
-    {
-        id: uuidv4(),
-        image:[
-            gentingAwanaSkyWayOnewaySkyworldOutdoorThemeParkTicketsImgOne,
-            gentingAwanaSkyWayOnewaySkyworldOutdoorThemeParkTicketsImgTwo,
-            gentingAwanaSkyWayOnewaySkyworldOutdoorThemeParkTicketsImgThree,
-            gentingAwanaSkyWayOnewaySkyworldOutdoorThemeParkTicketsImgFour,
-        ],
-        title:"Combo: Genting Awana SkyWay (One-way) + Skyworld Outdoor Theme Park Tickets",
-        desc:"Experience thrill, adventure, family fun, and more with these budget-friendly combo tickets to Genting Skytropolis and Skyworlds Theme Park.",
-        type:"bookTypeFour",
-        price: 166
-    },
-    {
-        id: uuidv4(),
-        image:[
-            gentingAwanaSkywayOnewaySkyworldOutdoorSkytropolisIndoorThemeParkImgOne,
-            gentingAwanaSkywayOnewaySkyworldOutdoorSkytropolisIndoorThemeParkImgTwo,
-            gentingAwanaSkywayOnewaySkyworldOutdoorSkytropolisIndoorThemeParkImgThree,
-            gentingAwanaSkywayOnewaySkyworldOutdoorSkytropolisIndoorThemeParkImgFour
-        ],
-        title:"Combo: Genting Awana Skyway (One-way) + Skyworld Outdoor + Skytropolis Indoor Theme Park ",
-        desc:"Upgrade your Kuala Lumpur trip with this super saver combo that gives you access to the city’s top attractions.",
-        type:"bookTypeFive",
-        price: 225
     },
     
 ]

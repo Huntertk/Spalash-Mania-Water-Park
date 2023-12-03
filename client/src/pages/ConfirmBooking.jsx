@@ -1,4 +1,3 @@
-import paymentSuccesImg from '../assets/images/paymentSucces.png'
 import { Navigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux'
 import { FaCheckCircle } from "react-icons/fa";

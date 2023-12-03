@@ -17,14 +17,11 @@ import {
     countTotalBookingAmount,
     cancelBooking,
     closePaxModel,
-    generalCountIncrease,
-    generalCountDecrease,
-    generalTotalAmount,
 } from '../features/booking/bookingSlice';
 
 
 
-const Pax = ({category, ageText, price, count, actionType, total}) => {
+const Pax = ({category, ageText, count, actionType, total}) => {
     const dispatch = useDispatch()
     
     const handleIncrese = () => {
@@ -46,7 +43,10 @@ const Pax = ({category, ageText, price, count, actionType, total}) => {
                     count === 0 ? <AiOutlineMinusCircle className='disabledBtn'  /> : <AiOutlineMinusCircle onClick={handleDecrease} />
                 }
                 <p>{count}</p>
-                    <AiOutlinePlusCircle onClick={handleIncrese} />
+                {
+                    count === 10 ? <AiOutlinePlusCircle className='disabledBtn'  /> : <AiOutlinePlusCircle onClick={handleIncrese} />
+                }
+                    
             </div>
             <div className="price">
                 <span>MYR {total}</span>
@@ -67,9 +67,6 @@ const PaxModal = ({selectedDate}) => {
         bookingDate,
         type,
         bookingTitle,
-        pref,
-        generalCount,
-        generalTotal
     } = useSelector((store) => store.booking)
 
     const dispatch = useDispatch()
@@ -78,10 +75,9 @@ const PaxModal = ({selectedDate}) => {
         dispatch(adultTotalAmount())
         dispatch(childTotalAmount())
         dispatch(seniorTotalAmount())
-        dispatch(generalTotalAmount())
         dispatch(countTotalBookingAmount())
 
-    },[adultCount, childCount, seniorCount, generalCount])
+    },[adultCount, childCount, seniorCount])
     const navigate = useNavigate()
 
   return (
@@ -94,26 +90,11 @@ const PaxModal = ({selectedDate}) => {
             }}>Cancel</button>
         </div>
         <p className='bookingType'>{bookingTitle}</p>
-        {pref && <p className='bookingType'>{pref}</p>}
         <h1>Select number of tickets</h1>
         <div className="paxSelector">
-            {type === 'bookTypeTwo' ? <Pax
-             category ={"General"} 
-             ageText={""} 
-             price={199}
-             count={generalCount}
-             actionType={{
-                 increase: generalCountIncrease,
-                 decrease: generalCountDecrease
-             }}
-             total={generalTotal}
-            />
-        :    (
-            <>
                 <Pax  
                 category ={"Adult"} 
                 ageText={"13 to 59 yrs"} 
-                price={199}
                 count={adultCount}
                 actionType={{
                     increase: adultCountIncrease,
@@ -124,7 +105,6 @@ const PaxModal = ({selectedDate}) => {
                 <Pax  
                 category ={"Child"} 
                 ageText={"6 to 12 yrs"} 
-                price={150}
                 count={childCount}
                 actionType={{
                     increase: childCountIncrease,
@@ -135,7 +115,6 @@ const PaxModal = ({selectedDate}) => {
                 <Pax  
                 category ={"Senior"} 
                 ageText={"Above 59 yrs"} 
-                price={150} 
                 count={seniorCount}
                 actionType={{
                     increase: seniorCountIncrease,
@@ -143,9 +122,6 @@ const PaxModal = ({selectedDate}) => {
                 }}
                 total={seniorTotal}
                 />
-            </>
-        )
-        }
         </div>
             <div className="totalPayable">
                 <span>Total</span>

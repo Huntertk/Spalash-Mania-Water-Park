@@ -3,7 +3,6 @@ import '../styles/PaymentSuccess.scss'
 import { Navigate, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import paymentSuccesImg from '../assets/images/paymentSucces.png'
 import { FaCheckCircle } from "react-icons/fa";
 import { toast } from 'react-toastify';
 import { bookingConfirm, settingBookingResponse } from '../features/booking/bookingSlice';
