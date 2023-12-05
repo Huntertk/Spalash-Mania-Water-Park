@@ -20,8 +20,10 @@
 
         .listData{
             display: grid;
-            grid-template-columns: repeat(4,350px);
+            grid-template-columns: repeat(3,350px);
             text-align: start;
+            justify-items: center;
+           
             gap: 20px;
             padding-bottom: 1rem;
             overflow-x: scroll;
@@ -67,6 +69,8 @@
     
     
                 .listData {    
+                    justify-content: center;
+                    overflow:unset;
                     ul {
     
                         li {

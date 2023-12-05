@@ -8,7 +8,6 @@ import { DayPicker, Row } from 'react-day-picker';
 import { useDispatch, useSelector } from 'react-redux';
 import { openPaxModel, setBookingDate } from '../features/booking/bookingSlice';
 import {Navigate, useNavigate} from 'react-router-dom'
-import PreferenceTour from './PreferenceTour';
 import PaxModal from './PaxModal';
 
 

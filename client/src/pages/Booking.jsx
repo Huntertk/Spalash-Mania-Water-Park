@@ -70,7 +70,7 @@ const Booking = () => {
     return (
         <section className='bookingMainContainer'>
             <div className="bookingWrapper">
-                <img className='banner' src={image} alt="" />
+                <img className='banner' src={"https://i.postimg.cc/15PZfQSw/Splash-Mania-Waterpark-Ticketin-Gamuda-Cove-Selangor-Klook-Malaysia.jpg"} alt="" />
                 <h1>Confirm and Pay</h1>
                 <div className="detailsWrapper">
                     <p className='bookingType'>{bookingTitle}</p>

@@ -20,8 +20,7 @@ const Cards = () => {
 const ThingsTodo = () => {
   return (
     <section className='HomeBuffetOptionMainContainer'>
-        <h1>Things To Do Genting SkyWorlds Theme Park</h1>
-        <p>Designed for movie enthusiasts, Genting SkyWorlds offers a captivating experience with rides and attractions inspired by beloved films. Enjoy a delightful time as the theme park provides a variety of engaging activities for visitors to explore and enjo</p>
+        <h1>Highlights Splash Mania WaterPark</h1>
         <div className="cardMainContainer">
             <Cards />
         </div>

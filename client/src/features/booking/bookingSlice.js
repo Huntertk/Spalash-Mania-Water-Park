@@ -57,13 +57,13 @@ const bookingSlice = createSlice({
             state.seniorCount = state.seniorCount - 1
         },
         adultTotalAmount: (state) => {
-            state.adultTotal = state.adultCount *  125
+            state.adultTotal = state.adultCount *  99
         },
         childTotalAmount: (state) => {
-            state.childTotal = state.childCount *  86
+            state.childTotal = state.childCount *  78
         },
         seniorTotalAmount: (state) => {
-            state.seniorTotal = state.seniorCount *  86
+            state.seniorTotal = state.seniorCount *  78
         },
         countTotalBookingAmount: (state, action) => {
             state.totalAmount = state.adultTotal + state.childTotal + state.seniorTotal

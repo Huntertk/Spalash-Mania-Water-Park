@@ -6,24 +6,24 @@ const HomeVisitorTips = () => {
     <section className="homeVisitorTipsMainContainer">
         <h1>Visitor Tips & Guidelines</h1>
         <ul>
-            <li><span>Guest Service : </span> &nbsp;For ticket assistance, information, and reporting lost items, utilize the Guest Services available at Studio Plaza and SkyAvenue Gateway.</li>
+            <li><span>Re-admission : </span> &nbsp;Ticket is only for 1 time entry. No re-entry allowed.</li>
             <li>
               <span>
-                Cashless Payment : 
+                Hygiene and Comfort : 
               </span>
-             &nbsp;Genting SkyWorlds operates on a cashless payment system. In addition to credit/debit cards and QR payments, the theme park accepts GeMCash and Genting Points.
+             &nbsp;Please bring extra clothes and amenities for you personal use.
             </li>
             <li>
               <span>
-                Book Online :  
+                Parking :  
               </span>
-              &nbsp;Enjoy a hassle-free ticket booking experience by securing your tickets online
+              &nbsp;Enjoy free parking space for all customers.
             </li>
             <li>
               <span>
-                Readmission : 
+                Food and Meals : 
               </span>
-              &nbsp;Guests who register with biometric details at the turnstile have the option to re-enter the park within the validity period of their ticket.
+              &nbsp;A variety of restaurants and shops available.No outside food is allowed including mineral water bottle. 
             </li>
         </ul>
     </section>

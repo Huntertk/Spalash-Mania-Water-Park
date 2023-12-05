@@ -1,6 +1,6 @@
 import React from 'react'
 import '../styles/homeTopContainer.scss'
-import image from '../assets/images/homeTopImage.avif'
+import image from '../assets/images/homeMain.jpg'
 
 const HomeTopContainer = () => {
 
