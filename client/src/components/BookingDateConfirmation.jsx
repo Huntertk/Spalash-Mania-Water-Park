@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import '../styles/bookingDateConfirmation.scss'
 import 'react-day-picker/dist/style.css';
 import './day-picker.css';
@@ -9,6 +9,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { openPaxModel, setBookingDate } from '../features/booking/bookingSlice';
 import {Navigate, useNavigate} from 'react-router-dom'
 import PaxModal from './PaxModal';
+import axios from 'axios'
+import moment from 'moment';
 
 
 function isPastDate(date) {
@@ -83,9 +85,24 @@ const BookingDateConfirmation = () => {
     const {isPaxModal, bookingDate, type,bookingTitle} = useSelector(store => store.booking)
         const [selectedDate, setSelectedDate] = useState("")
         const [calenderOpen, setCalenderOpen] = useState(false)
+        const [blockedDates, setBlockedDates] = useState([])
+    const disabledDates = blockedDates?.map((dates) => new Date(dates.blockDates))
 
         const disabledDays = [
+            ...disabledDates
           ];
+
+          const getBlockDates = async () => {
+            try {
+                const {data} = await axios.get('/api/v1/dates-manage/block-dates')
+                setBlockedDates(data.blockDates)
+              } catch (error) {
+                  console.log(error);
+              }
+          }
+        useEffect(() => {
+            getBlockDates()
+          },[selectedDate])
 
         if(!type){
             return <Navigate to="/" />
@@ -114,7 +131,7 @@ const BookingDateConfirmation = () => {
             onSelect={setSelectedDate}
             fromMonth={defaultMonth}
             toDate={new Date(Date.now() + 1000 * 60 *60 *24 *30)}
-            disabled={disabledDays}
+            disabled={disabledDates}
             />
             </div>
             <div className="selectedDate">
