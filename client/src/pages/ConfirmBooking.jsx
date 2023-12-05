@@ -11,7 +11,6 @@ const ConfirmBooking = () => {
         name,
         bookingId,
         bookingTitle,
-        pref
       } = useSelector(store => store.booking)
 
       const dispatch = useDispatch()

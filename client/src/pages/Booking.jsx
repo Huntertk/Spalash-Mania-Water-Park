@@ -46,7 +46,6 @@ const Booking = () => {
                 childCount,
                 seniorCount,
                 totalAmount,
-                pref,
                 bookingTitle,
                 bookingType: type,
                 responseClientUrl
@@ -119,17 +118,6 @@ const Booking = () => {
                             onChange={(e) => setName(e.target.value)}
                             value={name}
                         />
-                        {/* <label htmlFor="phone">Mobile Number</label>
-                    <input 
-                    type="text" 
-                    id="phone" 
-                    placeholder='+60XXXXXXXX'  
-                    autoComplete="off" 
-                    required
-                    onChange={handlePhNumberChange}
-                    value={mobileNumber}
-                    maxLength={"10"}
-                    /> */}
 
                         <label htmlFor="phone">Phone</label>
                         <PhoneInput
