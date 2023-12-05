@@ -117,6 +117,11 @@ export const homeFAQ = [
         ques:"What are the games includes in my tickets",
         ans:"All games in the park except for SurfMania."
     },
+    {
+        id: uuidv4(),
+        ques:"If my child is more than 120cm, can i buy Child Ticket ?",
+        ans:"No Child above 120cm will be considered as adult."
+    },
 ]
 
 
