@@ -23,7 +23,14 @@ function OnlyFutureRow(props) {
   return <Row {...props} />;
 }
 
-const DateBtn = ({setSelectedDate, setCalenderOpen,selectedDate, calenderOpen}) => {
+const DateBtn = ({setSelectedDate, setCalenderOpen,selectedDate, calenderOpen, disabledDates}) => {
+
+    const disabledBtnToDate = (btnDate) => {
+        const settingHourToZero = disabledDates?.map(d => d.setHours(0,0,0,0))
+        const findingDate = settingHourToZero?.find(d => d === new Date(Date.now() + btnDate).setHours(0,0,0,0))
+        return findingDate
+    }
+
     let days = ["Sun", "Mon", "Tues", "Wed", "Thur", "Fri", "Sat"]
     function getDayName(date) {
         return new Date(date).toLocaleDateString('en-US', {weekday: 'short'});
@@ -34,6 +41,7 @@ const DateBtn = ({setSelectedDate, setCalenderOpen,selectedDate, calenderOpen}) 
         <div className="dateBtnContainer">
            <button className={selectedDate.toString() == new Date(Date.now() + 1000 *60 *60 *24)  ? "active" : ""}
            onClick={() => setSelectedDate(new Date(Date.now() + 1000 *60 *60 *24 ))}
+           disabled={disabledBtnToDate(1000 *60 *60 *24)}
            >
             <span>
                 {new Date(Date.now() + 1000 *60 *60 *24).getDate()}
@@ -45,6 +53,7 @@ const DateBtn = ({setSelectedDate, setCalenderOpen,selectedDate, calenderOpen}) 
            <button 
            className={selectedDate.toString() == new Date(Date.now() + 1000*60*60*242)  ? "active" : ""}
            onClick={() => setSelectedDate(new Date(Date.now() + 1000*60*60*24*2))}
+           disabled={disabledBtnToDate(1000 *60 *60 *24*2)}
            >
             <span>
             {new Date(Date.now() + 1000 * 60 * 60 * 24 *2 ).getDate()}
@@ -56,6 +65,7 @@ const DateBtn = ({setSelectedDate, setCalenderOpen,selectedDate, calenderOpen}) 
            <button  
             className={selectedDate.toString() == new Date(Date.now() + 1000*60*60*24 * 3)  ? "active" : ""}
            onClick={() => setSelectedDate(new Date(Date.now() + 1000*60*60*24 * 3))}
+           disabled={disabledBtnToDate(1000 *60 *60 *24*3)}
            >
             <span>
             {new Date(Date.now() + 1000 * 60 * 60 * 24 *3  ).getDate()}
@@ -67,6 +77,7 @@ const DateBtn = ({setSelectedDate, setCalenderOpen,selectedDate, calenderOpen}) 
            <button 
             className={selectedDate.toString() == new Date(Date.now() + 1000*60*60*24 *4)  ? "active" : ""}
            onClick={() => setSelectedDate(new Date(Date.now() + 1000*60*60*24 * 4))}
+           disabled={disabledBtnToDate(1000 *60 *60 *24*4)}
            >
             <span>
             {new Date(Date.now() + 1000 * 60 * 60 * 24 *4  ).getDate()}
@@ -86,7 +97,10 @@ const BookingDateConfirmation = () => {
         const [selectedDate, setSelectedDate] = useState("")
         const [calenderOpen, setCalenderOpen] = useState(false)
         const [blockedDates, setBlockedDates] = useState([])
-    const disabledDates = blockedDates?.map((dates) => new Date(dates.blockDates))
+        const disabledDates = blockedDates?.map((dates) => new Date(dates.blockDates))
+        // console.log(disabledDates[0]?.setHours(0,0,0,0));
+        // console.log(new Date(Date.now() + 1000 *60*60*24).setHours(0,0,0,0));
+       
 
         const disabledDays = [
             ...disabledDates
@@ -119,6 +133,7 @@ const BookingDateConfirmation = () => {
             setCalenderOpen={setCalenderOpen} 
             selectedDate={selectedDate}
             calenderOpen={calenderOpen}
+            disabledDates={disabledDates}
             />
             <div className="moreDatesContainer">
                 <DayPicker
