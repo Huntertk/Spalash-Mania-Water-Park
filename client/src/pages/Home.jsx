@@ -30,7 +30,7 @@ const Home = () => {
       <HomeHighlights />
       <ThingsTodo />
       <HomeAdditionalInformation />
-      <HomeVisitorTips />
+      {/* <HomeVisitorTips /> */}
       <HomeMap />
       <HomeFaq />
      </section>
