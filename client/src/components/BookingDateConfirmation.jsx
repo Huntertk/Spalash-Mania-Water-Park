@@ -33,7 +33,7 @@ const DateBtn = ({setSelectedDate, setCalenderOpen,selectedDate, calenderOpen}) 
     return (
         <div className="dateBtnContainer">
            <button className={selectedDate.toString() == new Date(Date.now() + 1000 *60 *60 *24)  ? "active" : ""}
-           onClick={() => setSelectedDate(new Date(Date.now()))}
+           onClick={() => setSelectedDate(new Date(Date.now() + 1000 *60 *60 *24 ))}
            >
             <span>
                 {new Date(Date.now() + 1000 *60 *60 *24).getDate()}
