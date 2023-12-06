@@ -1,33 +1,11 @@
 import React, { useState } from 'react'
 import '../styles/homeFaq.scss';
-import {BiSolidChevronDownCircle, BiSolidChevronUpCircle} from 'react-icons/bi';
+
 import { homeFAQ } from '../data';
+import QuestionContainer from './QuestionContainer';
 
 
-const QuestionContainer = ({data}) => {
-    const [isModalOpen, setIsModalOpen] = useState(false)
-    return  (
-        <div className='questionNanswerContainer' >
-            <div className="questionContainer" onClick={() => setIsModalOpen(prev => !prev)}>
-                <h2>{data.ques}</h2>
-                <div className="icon">
-                   {isModalOpen ? 
-                   <BiSolidChevronUpCircle />
-                   : 
-                   <BiSolidChevronDownCircle/>
-                }
-                </div>
-            </div>
-            {
-                isModalOpen && <div className="answer">
-                    <p>{data.ans}</p>
-                </div>
-            }
-                
 
-        </div>
-    )
-}
 
 
 const HomeFaq = () => {

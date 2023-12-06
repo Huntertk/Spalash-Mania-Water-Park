@@ -87,7 +87,37 @@ export const thingsTodo = [
 ]
 
 
-
+export const addQues = [
+    {
+        id: uuidv4(),
+        ques:"Operating Hours ?",
+        ans:[
+            "Thursday - Tuesday : 10am - 6pm", 
+            "(Closed on Wednesday EXCEPT during Malaysia public holidays and school holidays)"
+        ]
+    },
+    {
+        id: uuidv4(),
+        ques:"For Your Concern",
+        ans:[
+            "Adult: Height 110cm above.",
+            "Child height 90cm to 110cm",
+            "Senior Citizen age 60 and above."
+        ]
+    },
+    {
+        id: uuidv4(),
+        ques:"Refund/Cancellation Policy",
+        ans:[
+            "No cancellation and refund are allowed once purchased"
+        ]
+    },
+    {
+        id: uuidv4(),
+        ques:"Redemption Guide",
+        ans:["Upon arrival, show your ticket/e-voucher at the counter"]
+    },
+]
 
 
 
