@@ -30,7 +30,7 @@ export const createBooking = async (req, res) => {
             line_items: [
                 {
                     price_data: {
-                        currency: 'myr',
+                        currency: 'inr',
                         product_data: {
                             name: bookingTitle,
                             metadata:{
