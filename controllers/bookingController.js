@@ -16,12 +16,13 @@ export const createBooking = async (req, res) => {
         bookingDate,
         adultCount,
         childCount,
-        generalCount,
         seniorCount,
         totalAmount,
         bookingType,
         bookingTitle,
-        responseClientUrl
+        responseClientUrl,
+        webisteName,
+        pref
     } = req.body;
     try {
         const session = await stripe.checkout.sessions.create({
@@ -32,6 +33,17 @@ export const createBooking = async (req, res) => {
                         currency: 'myr',
                         product_data: {
                             name: bookingTitle,
+                            metadata:{
+                                bookingDate, 
+                                adultCount, 
+                                childCount, 
+                                seniorCount,
+                                pref, 
+                                name, 
+                                email, 
+                                mobileNumber, 
+                                webisteName
+                            }
                         },
                         unit_amount: totalAmount * 100,
                     },
@@ -39,8 +51,8 @@ export const createBooking = async (req, res) => {
                 },
             ],
             mode: 'payment',
-            success_url: `https://splash-mania-waterpark.onrender.com/${responseClientUrl}`,
-            cancel_url: 'https://splash-mania-waterpark.onrender.com/',
+            success_url: `https://splashmania.malaysia-experience.com/${responseClientUrl}`,
+            cancel_url: 'https://splashmania.malaysia-experience.com/',
             payment_intent_data: {
                 setup_future_usage: 'off_session',
                 description: 'Booking payment',
@@ -59,7 +71,6 @@ export const createBooking = async (req, res) => {
                     bookingDate,
                     adultCount,
                     childCount,
-                    generalCount,
                     seniorCount,
                     totalAmount,
                 },

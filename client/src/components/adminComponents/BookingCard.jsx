@@ -57,6 +57,7 @@ const BookingCard = (props) => {
           <div className="personCount">
             <p>Adult X {adultCount}</p>
             <p>Child X {childCount}</p>
+            <p>General X {generalCount}</p>
             <p>Senior X {seniorCount}</p>
           </div>
           <div className="bookingStatus">

@@ -98,7 +98,7 @@ export const addQues = [
     },
     {
         id: uuidv4(),
-        ques:"For Your Concern",
+        ques:"Child Policy",
         ans:[
             "Adult: Height 110cm above.",
             "Child height 90cm to 110cm",
@@ -145,17 +145,12 @@ export const homeFAQ = [
     {
         id: uuidv4(),
         ques:"What are the games includes in my tickets",
-        ans:"All games in the park except for SurfMania."
+        ans:"All games in the park except pay-per-rides like SurfMania, Zoomi's Runaway and Sky Leap."
     },
     {
         id: uuidv4(),
         ques:"If my child is more than 120cm, can i buy Child Ticket ?",
         ans:"No Child above 120cm will be considered as adult."
-    },
-    {
-        id: uuidv4(),
-        ques:"If my child is more than 110cm, can i buy Child Ticket ?",
-        ans:"No Child above 110cm will be considered as adult."
     },
 ]
 

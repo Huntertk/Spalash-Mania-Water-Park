@@ -8,7 +8,7 @@ const HomeTopContainer = () => {
     <section className='HomeTopContainer'>
         <div className="content">
             <h1>Book Splash Mania Waterpark Tickets</h1> 
-            <p>TravelVago is an authorized and trusted partner of the venue, offering curated experiences to enjoy this attraction.</p>
+            <p>Travelvago is an authorized and trusted partner of the venue, offering curated experiences to enjoy this attraction.</p>
         </div>
         <div className="homeTopImgContainer">
             <img src={image} alt="" />

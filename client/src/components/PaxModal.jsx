@@ -94,7 +94,7 @@ const PaxModal = ({selectedDate}) => {
         <div className="paxSelector">
                 <Pax  
                 category ={"Adult"} 
-                ageText={"13 to 59 yrs"} 
+                ageText={"Above 120cm"} 
                 count={adultCount}
                 actionType={{
                     increase: adultCountIncrease,
@@ -104,7 +104,7 @@ const PaxModal = ({selectedDate}) => {
                 />
                 <Pax  
                 category ={"Child"} 
-                ageText={"3 to 12 yrs"} 
+                ageText={"90cm - 120cm"} 
                 count={childCount}
                 actionType={{
                     increase: childCountIncrease,
