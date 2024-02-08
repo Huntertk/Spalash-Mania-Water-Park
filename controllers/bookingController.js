@@ -21,7 +21,7 @@ export const createBooking = async (req, res) => {
         bookingType,
         bookingTitle,
         responseClientUrl,
-        webisteName,
+        websiteName,
         pref
     } = req.body;
     try {
@@ -42,7 +42,7 @@ export const createBooking = async (req, res) => {
                                 name, 
                                 email, 
                                 mobileNumber, 
-                                webisteName
+                                websiteName
                             }
                         },
                         unit_amount: totalAmount * 100,
@@ -51,8 +51,8 @@ export const createBooking = async (req, res) => {
                 },
             ],
             mode: 'payment',
-            success_url: `https://splashmania.malaysia-experience.com/${responseClientUrl}`,
-            cancel_url: 'https://splashmania.malaysia-experience.com/',
+            success_url: `https://splash-mania-waterpark.onrender.com/${responseClientUrl}`,
+            cancel_url: 'https://splash-mania-waterpark.onrender.com/',
             payment_intent_data: {
                 setup_future_usage: 'off_session',
                 description: 'Booking payment',

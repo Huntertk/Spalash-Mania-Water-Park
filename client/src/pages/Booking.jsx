@@ -50,7 +50,7 @@ const Booking = () => {
                 bookingType: type,
                 responseClientUrl,
                 pref,
-                webisteName:"Spalash Mania Waterpark"
+                websiteName:"Spalash Mania Waterpark"
             })
             const response = res.data;
             const {data} = await axios.get('/api/v1/booking/totalbooking')
