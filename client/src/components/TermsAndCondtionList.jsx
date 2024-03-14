@@ -1,10 +1,10 @@
 import '../styles/termsandconditionlist.scss'
 
-const TermsAndCondtionList = ({data}) => {
+const TermsAndCondtionList = ({termsandconditiondata}) => {
     return (
         <div className="homeVisitorTipsMainContainer">
         {
-          data.map((da, index) => (
+          termsandconditiondata?.map((da, index) => (
             <div key={index}>
             <h1 >{da.title}</h1>
             <ul>

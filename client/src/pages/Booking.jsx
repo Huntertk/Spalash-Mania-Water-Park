@@ -48,9 +48,7 @@ const Booking = () => {
                 totalAmount,
                 bookingTitle,
                 bookingType: type,
-                responseClientUrl,
-                pref,
-                websiteName:"Spalash Mania Waterpark"
+                responseClientUrl
             })
             const response = res.data;
             const {data} = await axios.get('/api/v1/booking/totalbooking')
@@ -71,7 +69,7 @@ const Booking = () => {
     return (
         <section className='bookingMainContainer'>
             <div className="bookingWrapper">
-                <img className='banner' src={"https://i.postimg.cc/15PZfQSw/Splash-Mania-Waterpark-Ticketin-Gamuda-Cove-Selangor-Klook-Malaysia.jpg"} alt="" />
+                <img className='banner' src={"https://res.cloudinary.com/drrkaak40/image/upload/v1710172483/Malaysia%20Experience/Splash%20Mania/FB_IMG_1672326767007_ashbti.jpg"} alt="Splash Mania" />
                 <h1>Confirm and Pay</h1>
                 <div className="detailsWrapper">
                     <p className='bookingType'>{bookingTitle}</p>

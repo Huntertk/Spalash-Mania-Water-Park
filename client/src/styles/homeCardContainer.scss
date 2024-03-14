@@ -1,6 +1,7 @@
 @use './variables.scss' as *;
 
 
+
 .HomeCardMainContainer{
     display: flex;
     flex-direction: column;
@@ -12,6 +13,7 @@
         border: 1px solid $cardBorderColor;
         border-radius: 20px;
         overflow: hidden;
+        box-shadow: 1px 1px 10px 1px #ccc;
         .imageContainer{
             display: flex;
             align-items: center;
@@ -205,9 +207,9 @@
 
 @media screen and (min-width:1023px) {
     .HomeCardMainContainer {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
 
         .cardContainer {
 

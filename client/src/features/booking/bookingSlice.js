@@ -57,13 +57,27 @@ const bookingSlice = createSlice({
             state.seniorCount = state.seniorCount - 1
         },
         adultTotalAmount: (state) => {
-            state.adultTotal = state.adultCount *  99
+            if(state.type === 'bookTypeOne'){
+                state.adultTotal = state.adultCount *  103
+            } else if (state.type === 'bookTypeTwo'){
+                state.adultTotal = state.adultCount *  87.50
+            }
         },
         childTotalAmount: (state) => {
-            state.childTotal = state.childCount *  78
+            if(state.type === 'bookTypeOne'){
+                state.childTotal = state.childCount *  85
+            } else if (state.type === 'bookTypeTwo'){
+                state.childTotal = state.childCount *  82
+            }
+            
         },
         seniorTotalAmount: (state) => {
-            state.seniorTotal = state.seniorCount *  78
+            if(state.type === 'bookTypeOne'){
+                state.seniorTotal = state.seniorCount *  85
+            } else if (state.type === 'bookTypeTwo'){
+                state.seniorTotal = state.seniorCount *  82
+            }
+            
         },
         countTotalBookingAmount: (state, action) => {
             state.totalAmount = state.adultTotal + state.childTotal + state.seniorTotal

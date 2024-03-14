@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react'
-import '../styles/homeCardContainer.scss'
-// import { cardData } from '../data'
+import React, { useEffect, useState } from 'react';
+import '../styles/homeCardContainer.scss';
+// import { cardData } from '../data';
 import HomeCard from './HomeCard';
-import axios from 'axios'
-import LoadingSpinner from './LoadingSpinner'
-import {useDispatch} from 'react-redux'
+import axios from 'axios';
+import LoadingSpinner from './LoadingSpinner';
+import {useDispatch} from 'react-redux';
 import { initialRender } from '../features/booking/bookingSlice';
 
 
@@ -19,12 +19,12 @@ const HomeCardContainer = () => {
       console.log(error);
     }
   }
-
-
+  
   useEffect(() => {
     getCardData()
     dispatch(initialRender())
   },[])
+  
 
   if(!cardData){
     return <LoadingSpinner />

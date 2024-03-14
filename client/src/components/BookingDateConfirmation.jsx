@@ -11,6 +11,7 @@ import {Navigate, useNavigate} from 'react-router-dom'
 import PaxModal from './PaxModal';
 import axios from 'axios'
 import moment from 'moment';
+import LoadingSpinner from './LoadingSpinner';
 
 
 function isPastDate(date) {
@@ -105,6 +106,7 @@ const BookingDateConfirmation = () => {
         const [calenderOpen, setCalenderOpen] = useState(false)
         const [blockedDates, setBlockedDates] = useState([])
         const disabledDates = blockedDates?.map((dates) => new Date(dates.blockDates))
+        const [isLoading, setIsLoading] = useState(false)
         // console.log(disabledDates[0]?.setHours(0,0,0,0));
         // console.log(new Date(Date.now() + 1000 *60*60*24).setHours(0,0,0,0));
        
@@ -113,17 +115,34 @@ const BookingDateConfirmation = () => {
             ...disabledDates
           ];
 
-          const getBlockDates = async () => {
+          const getBookTypeOneBlockDates = async () => {
             try {
-                const {data} = await axios.get('/api/v1/dates-manage/block-dates')
+                setIsLoading(true)
+                const {data} = await axios.get('/api/v1/booktype-one-dates-manage/block-dates')
                 setBlockedDates(data.blockDates)
+                setIsLoading(false)
+              } catch (error) {
+                  console.log(error);
+              }
+          }
+
+          const getBookTypeTwoBlockDates = async () => {
+            try {
+                setIsLoading(true)
+                const {data} = await axios.get('/api/v1/booktype-two-dates-manage/block-dates')
+                setBlockedDates(data.blockDates)
+                setIsLoading(false)
               } catch (error) {
                   console.log(error);
               }
           }
         useEffect(() => {
-            getBlockDates()
-          },[selectedDate])
+            if(type === 'bookTypeOne'){
+                getBookTypeOneBlockDates()
+            } else if(type === 'bookTypeTwo'){
+                getBookTypeTwoBlockDates()
+            }
+          },[])
 
         if(!type){
             return <Navigate to="/" />
@@ -131,6 +150,9 @@ const BookingDateConfirmation = () => {
         const defaultMonth = new Date(Date.now());
 
         const navigate = useNavigate()
+        if(isLoading){
+            return <LoadingSpinner />
+          }
   return (
     <section className='bookingDateConfirmationMainContainer'>
         <div className="bookingDateWrapper">
@@ -152,7 +174,7 @@ const BookingDateConfirmation = () => {
             hidden={isPastDate}
             onSelect={setSelectedDate}
             fromMonth={defaultMonth}
-            toDate={new Date(Date.now() + 1000 * 60 *60 *24 *30)}
+            toDate={type === 'bookTypeTwo' ?  new Date(2024,3,9) : new Date(Date.now() + 1000 * 60 *60 *24 *60)}
             disabled={disabledDates}
             />
             </div>

@@ -1,6 +1,4 @@
-import React from 'react'
 import '../styles/homeTopContainer.scss'
-import image from '../assets/images/homeMain.jpg'
 
 const HomeTopContainer = () => {
 
@@ -11,7 +9,7 @@ const HomeTopContainer = () => {
             <p>Travelvago is an authorized and trusted partner of the venue, offering curated experiences to enjoy this attraction.</p>
         </div>
         <div className="homeTopImgContainer">
-            <img src={image} alt="" />
+            <img src={"https://res.cloudinary.com/drrkaak40/image/upload/v1710172484/Malaysia%20Experience/Splash%20Mania/FB_IMG_1672326765049_bpzos1.jpg"} alt="Splash Mania Waterpark" />
         </div>
     </section>
   )

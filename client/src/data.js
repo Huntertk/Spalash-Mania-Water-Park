@@ -4,7 +4,20 @@ import { v4 as uuidv4 } from 'uuid';
 
 export const cardData = [
     {
-        id: uuidv4(),
+        _id: uuidv4(),
+        title: "Ramadan Special Promo!",
+        desc: "Grab your tickets with special offer now for this Ramadan!",
+        type: "bookTypeTwo",
+        image: [
+            "https://res.cloudinary.com/drrkaak40/image/upload/v1710152417/Malaysia%20Experience/Splash%20Mania/2_a8g8zn.jpg",
+            "https://res.cloudinary.com/drrkaak40/image/upload/v1710152417/Malaysia%20Experience/Splash%20Mania/1_grrkdx.jpg",
+            "https://res.cloudinary.com/drrkaak40/image/upload/v1710152419/Malaysia%20Experience/Splash%20Mania/4_m1bauo.jpg",
+            "https://res.cloudinary.com/drrkaak40/image/upload/v1710152422/Malaysia%20Experience/Splash%20Mania/3_ssdu3a.jpg",
+            "https://res.cloudinary.com/drrkaak40/image/upload/v1710152427/Malaysia%20Experience/Splash%20Mania/2_nbovnn.jpg",
+        ]
+    },
+    {
+        _id: uuidv4(),
         image:[
             "https://i.postimg.cc/htdDCsFR/splashmania-newtagline-2022-2.png",
             "https://i.postimg.cc/6688YC4Y/FB-IMG-1672326767007.jpg",
@@ -31,31 +44,31 @@ export const cardData = [
 export const cardHighLightsDetails = [
     {
         id: uuidv4(),
-        image: "https://i.postimg.cc/PJ5f2kHS/Whats-App-Image-2023-12-05-at-09-31-13.jpg",
+        image: "https://res.cloudinary.com/drrkaak40/image/upload/v1710172492/Malaysia%20Experience/Splash%20Mania/WhatsApp_Image_2023-12-05_at_09.31.13_fcuvlf.jpg",
         title:"Twista",
         desc:"Indulge in excitement as you navigate a high-speed slide, spiraling through a bowl before the exhilarating release."
     },
     {
         id: uuidv4(),
-        image: "https://i.postimg.cc/vBzHrZJ1/Whats-App-Image-2023-12-05-at-09-31-31.jpg",
+        image: "https://res.cloudinary.com/drrkaak40/image/upload/v1710172492/Malaysia%20Experience/Splash%20Mania/WhatsApp_Image_2023-12-05_at_09.31.31_ihv9uc.jpg",
         title:"Monsta",
         desc:"Embark on an exhilarating adventure as you zoom down a high-speed slide, spinning within a bowl before the thrilling release."
     },  
     {
         id: uuidv4(),
-        image: "https://i.postimg.cc/QxPNkPyq/Whats-App-Image-2023-12-05-at-09-32-16.jpg",
+        image: "https://res.cloudinary.com/drrkaak40/image/upload/v1710172494/Malaysia%20Experience/Splash%20Mania/WhatsApp_Image_2023-12-05_at_09.32.16_z5zder.jpg",
         title:"Maniac Racers",
         desc:"Compete against your friends on this multi-flume slide that enables you to race and drift while keeping an eye on your companions."
     },  
     {
         id: uuidv4(),
-        image: "https://i.postimg.cc/pXyXjxqT/Whats-App-Image-2023-12-05-at-09-32-32.jpg",
+        image: "https://res.cloudinary.com/drrkaak40/image/upload/v1710172497/Malaysia%20Experience/Splash%20Mania/WhatsApp_Image_2023-12-05_at_09.32.32_swjxwr.jpg",
         title:"Wild Rush",
         desc:"A timeless, iconic water slides featuring exhilarating twists and 360-degree loops."
     },  
     {
         id: uuidv4(),
-        image:"https://i.postimg.cc/brVy5FNp/Whats-App-Image-2023-12-05-at-09-31-44.jpg",
+        image:"https://res.cloudinary.com/drrkaak40/image/upload/v1710172496/Malaysia%20Experience/Splash%20Mania/WhatsApp_Image_2023-12-05_at_09.31.44_pyeu2e.jpg",
         title:"Sumaumeira Drop",
         desc:"Feel the adrenaline rush with a sudden descent from the summit, plunging into curving high-speed body slides."
     },    
@@ -67,22 +80,22 @@ export const thingsTodo = [
     {
         id: uuidv4(),
         desc:" Embark on an adventure and experience the excitement of 29 pulse-pounding water slides and 15 additional attractions, including the Lazy River, Family Raft Ride, Master Blaster Splash Pad, and many more.",
-        image: "https://i.postimg.cc/L8xSc0rf/gallery-desktop-7.png"
+        image: "https://res.cloudinary.com/drrkaak40/image/upload/v1710172494/Malaysia%20Experience/Splash%20Mania/gallery-desktop-7_jn1cym.png"
     },
     {
         id: uuidv4(),
         desc:"Indulge in exhilarating moments with your loved ones as you explore 39 thrilling water slides and rides at Splash Mania waterpark.",
-        image: "https://i.postimg.cc/D0GyFdqh/FB-IMG-1675571108280.jpg"
+        image: "https://res.cloudinary.com/drrkaak40/image/upload/v1710172486/Malaysia%20Experience/Splash%20Mania/FB_IMG_1675571108280_z7dacg.jpg"
     },
     {
         id: uuidv4(),
         desc:"Immerse yourself in the enclosed Shaka Waka tube slide, where you can encounter breathtaking lighting and audio effects for a truly spectacular experience.",
-        image: "https://i.postimg.cc/15PZfQSw/Splash-Mania-Waterpark-Ticketin-Gamuda-Cove-Selangor-Klook-Malaysia.jpg"
+        image: "https://res.cloudinary.com/drrkaak40/image/upload/v1710172492/Malaysia%20Experience/Splash%20Mania/SplashManiaWaterparkTicketinGamudaCoveSelangor-KlookMalaysia_xenhpd.jpg"
     },
     {
         id: uuidv4(),
         desc:" Embark on the ultimate aquatic escapade while tackling the massive waves of the wave pool.",
-        image: "https://i.postimg.cc/fRfyJK1T/FB-IMG-1672326776017.jpg"
+        image: "https://res.cloudinary.com/drrkaak40/image/upload/v1710172484/Malaysia%20Experience/Splash%20Mania/FB_IMG_1672326776017_gxupn5.jpg"
     },
 ]
 
@@ -93,7 +106,17 @@ export const addQues = [
         ques:"Operating Hours ?",
         ans:[
             "Thursday - Tuesday : 10am - 6pm", 
-            "(Closed on Wednesday EXCEPT during Malaysia public holidays and school holidays)"
+            "(Closed on Wednesday EXCEPT during Malaysia public holidays and school holidays)",
+            "Ramadan Promo Operation Hours (12 March to 9 April 2024)"
+        ]
+    },
+    {
+        id: uuidv4(),
+        ques:"Ramadan Promo Operation Hours ?",
+        ans:[
+            "(12 March to 9 April 2024)",
+            "9am - 5pm everyday",
+            "Closed on Tuesday & Wednesday"
         ]
     },
     {
@@ -192,65 +215,25 @@ export const helpCenterCancellationFAQ = [
 ]
 
 
-export const termsandconditiondata = [
+
+
+
+
+
+
+
+
+[
     {
-        id: uuidv4(),
-        title: "Limited License",
-        list:["You are granted a non-exclusive, non-transferable license to access and use our Website in accordance with these Terms."]
-    },
-    {
-        id: uuidv4(),
-        title: "Our Relationship",
-        list:["We serve as an intermediary for purchasing goods/services and do not create any other relationship with users"]
-    },
-    {
-        id: uuidv4(),
-        title: "Legal Compliance:",
-        list:["You agree to comply with all applicable laws and regulations. We may take appropriate action for non-compliance."]
-    },
-    {
-        id: uuidv4(),
-        title: "Eligibility and Registration",
-        list:["You certify being at least 18 years old or having parental permission if aged 13 to 18. Registration in violation of these terms is unauthorized."]
-    },
-    {
-        id: uuidv4(),
-        title: "DMCA Compliance",
-        list:["If you believe your work is infringed, provide required information to support@travelvago.com."]
-    },
-    {
-        id: uuidv4(),
-        title: "Intellectual Property",
-        list:["Our trademarks and Website content are protected. Your use does not grant ownership rights."]
-    },
-    {
-        id: uuidv4(),
-        title: "Linking",
-        list:["You may link to our Website, following guidelines provided."]
-    },
-    {
-        id: uuidv4(),
-        title: "Links to Other Websites",
-        list:["We provide links for convenience, but we do not endorse or have an affiliation with Third Party Websites."]
-    },
-    {
-        id: uuidv4(),
-        title: "Data Protection",
-        list:["We collect and use personal data as necessary. More details in our privacy policy.https://www.travelvago.com/privacy-policy"]
-    },
-    {
-        id: uuidv4(),
-        title: "Warranty Disclaimer",
-        list:["We reserve the right to change Website content without notice. We are not responsible for errors, interruptions, or technical malfunctions."]
-    },
-    {
-        id: uuidv4(),
-        title: "Limitation of Liability",
-        list:["We and our affiliates are not liable for any loss or damage resulting from Website use."]
-    },
-    {
-        id: uuidv4(),
-        title: "Arbitration",
-        list:["Any legal controversy will be settled by binding arbitration. Each party bears one-half of arbitration fees."]
-    },
+        title: "Ramadan Special Promo!",
+        desc: "Experience the ultimate thrills with your loved ones on 39 exciting water slides and rides at SplashMania waterpark.",
+        type: "bookTypeTwo",
+        image: [
+            "https://res.cloudinary.com/drrkaak40/image/upload/v1710152417/Malaysia%20Experience/Splash%20Mania/2_a8g8zn.jpg",
+            "https://res.cloudinary.com/drrkaak40/image/upload/v1710152417/Malaysia%20Experience/Splash%20Mania/1_grrkdx.jpg",
+            "https://res.cloudinary.com/drrkaak40/image/upload/v1710152419/Malaysia%20Experience/Splash%20Mania/4_m1bauo.jpg",
+            "https://res.cloudinary.com/drrkaak40/image/upload/v1710152422/Malaysia%20Experience/Splash%20Mania/3_ssdu3a.jpg",
+            "https://res.cloudinary.com/drrkaak40/image/upload/v1710152427/Malaysia%20Experience/Splash%20Mania/2_nbovnn.jpg",
+        ]
+    }
 ]

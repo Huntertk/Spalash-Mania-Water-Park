@@ -9,7 +9,8 @@ import cors from 'cors';
 import bookingRouter from './routes/bookingRoute.js'
 import adminRouter from './routes/adminRoute.js'
 import bookingPlanRouter from './routes/bookingPlanRoute.js'
-import datesRouter from './routes/datesRoutes.js'
+import bookTypeOneDateRouter from './routes/bookTypeOneDateRoutes.js'
+import bookTypeTwoDateRouter from './routes/bookTypeTwoDateRoutes.js'
 import errorHandlerMiddleware from './middlewares/errorHandleMiddleware.js'
 
 
@@ -29,7 +30,8 @@ app.use(cookieParser())
 app.use("/api/v1/booking", bookingRouter)
 app.use("/api/v1/admin", adminRouter)
 app.use("/api/v1/bookingplan", bookingPlanRouter)
-app.use("/api/v1/dates-manage", datesRouter)
+app.use("/api/v1/booktype-one-dates-manage", bookTypeOneDateRouter)
+app.use("/api/v1/booktype-two-dates-manage", bookTypeTwoDateRouter)
 
 app.use(express.static(path.join(__dirname, '/client/dist')))
 

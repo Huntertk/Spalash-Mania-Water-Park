@@ -20,9 +20,7 @@ export const createBooking = async (req, res) => {
         totalAmount,
         bookingType,
         bookingTitle,
-        responseClientUrl,
-        websiteName,
-        pref
+        responseClientUrl
     } = req.body;
     try {
         const session = await stripe.checkout.sessions.create({
@@ -30,7 +28,7 @@ export const createBooking = async (req, res) => {
             line_items: [
                 {
                     price_data: {
-                        currency: 'inr',
+                        currency: 'myr',
                         product_data: {
                             name: bookingTitle,
                             metadata:{
@@ -38,11 +36,10 @@ export const createBooking = async (req, res) => {
                                 adultCount, 
                                 childCount, 
                                 seniorCount,
-                                pref, 
                                 name, 
                                 email, 
                                 mobileNumber, 
-                                websiteName
+                                websiteName:"Spalash Mania Waterpark"
                             }
                         },
                         unit_amount: totalAmount * 100,
@@ -51,8 +48,8 @@ export const createBooking = async (req, res) => {
                 },
             ],
             mode: 'payment',
-            success_url: `https://splash-mania-waterpark.onrender.com/${responseClientUrl}`,
-            cancel_url: 'https://splash-mania-waterpark.onrender.com/',
+            success_url: `https://splashmania.malaysia-experience.com/${responseClientUrl}`,
+            cancel_url: 'https://splashmania.malaysia-experience.com/',
             payment_intent_data: {
                 setup_future_usage: 'off_session',
                 description: 'Booking payment',
@@ -804,7 +801,7 @@ export const successBooking = async (req, res, next) => {
                                                                                 <tr>
                                                                                     <td align="left" class="esd-block-text es-p10" esd-links-color="#14a0f6">
                                                                                         <p style="color: #000000; line-height: 200%; font-size: 15px;">We're delighted to confirm your booking! Your official e-ticket is on its way to your email shortly. In case you don't receive it, please don't hesitate to get in touch with us.</p>
-                                                                                        <p style="color: #000000; line-height: 200%; font-size: 15px;">Contact details:<br>Tel: +6017-2018194<br>Email: <a href="mailto:support@malaysia-experience.com" target="_blank" style="font-size: 15px; color: #14a0f6;">support@malaysia-experience.com</a></p>
+                                                                                        <p style="color: #000000; line-height: 200%; font-size: 15px;">Contact details:<br>Tel: +6017-2018194, +60173078194, +60193058194<br>Email: <a href="mailto:support@malaysia-experience.com" target="_blank" style="font-size: 15px; color: #14a0f6;">support@malaysia-experience.com</a></p>
                                                                                         <p style="color: #000000; line-height: 200%; font-size: 15px;">Thank you for choosing Malaysia Experience. We look forward to serving you.</p>
                                                                                         <p style="color: #000000; line-height: 200%; font-size: 15px;">Best regards,<br>Support Team<br>Malaysia Experience</p>
                                                                                     </td>

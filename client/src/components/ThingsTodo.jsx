@@ -7,7 +7,7 @@ const Cards = () => {
     return  (
         thingsTodo.map((data) => {
             return <div className="card" key={data.id}>
-                <img src={data.image} alt="" />
+                <img src={data.image} alt={data.desc} />
                 <div className="content">
                     <h3>{data.title}</h3>
                     <p>{data.desc}</p>

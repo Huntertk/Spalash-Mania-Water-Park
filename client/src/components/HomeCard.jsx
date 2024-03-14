@@ -7,7 +7,8 @@ import { DayPicker } from 'react-day-picker';
 import {BiSolidDollarCircle} from 'react-icons/bi'
 import { Link, useNavigate } from 'react-router-dom';
 import {useDispatch} from 'react-redux'
-import { choosingBooking, countTotalBookingAmount } from '../features/booking/bookingSlice';
+import { choosingBooking} from '../features/booking/bookingSlice';
+import HomeWhatsIncluded from './HomeWhatsIncluded';
 
 const Calender = ({id}) =>{
     const [selectedDate, setSelectedDate] = useState(false)
@@ -55,37 +56,33 @@ const Calender = ({id}) =>{
 
 
 const HomeCard = ({data}) => {
-    const {image, id, title, desc, type, price} = data;
+    const {image, id, title, desc, type, pricing, preference} = data;
     const dispatch = useDispatch()
     const navigate = useNavigate()
   return (
+    <>
     <div className="cardContainer">
         <div className="imageContainer">
-            {data.image.map((ima, index) =>  <img key={index} src={ima} alt="" />)}
+            {data.image.map((ima, index) =>  <img key={index} src={ima} alt=""  onClick={() => setImageViwer(true)}/>)}
         </div>
             <div className="content">
                 <h3>{title}</h3>
                 <p>{desc}</p>
                 <p>Next available : Tomorrow</p>
-                {/* <h4>MYR {price}</h4> */}
-                {/* <Calender id={id} /> */}
             </div>
             <div className="cardBtnContainer">
                 <button onClick={() => {
-                    dispatch(choosingBooking({type, title}))
+                    dispatch(choosingBooking({type, title, pricing, preference}))
                     return navigate("/date-confirm")
                 }} className='checkAvailability'>
                     Book Now
                 </button>
-            <div className="cancelPolicy">
-                <BiSolidDollarCircle />
-                <div className="cancelPolicyContent">
-                    <p>Cancellation policy</p>
-                    <span>These tickets can't be cancelled or rescheduled.</span>
-                </div>
             </div>
+            <div className="extra">
+                <HomeWhatsIncluded />
             </div>
         </div>
+    </>
   )
 }
 
